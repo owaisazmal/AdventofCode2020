@@ -1,5 +1,5 @@
-// Advent of Code 2020 - Day 1: Report Repair
-const fs = require('fs'); // importing fs to read the file
+// --Advent of Code 2020 - Day 1: Report Repair--
+const fs = require('fs'); // importing fs to read the file    https://nodejs.org/api/fs.html#file-system
 
 // Read the input file, it have numbers
 const input = fs.readFileSync('input.txt', 'utf8'); // Using readFileSync for sync read file
@@ -28,4 +28,4 @@ function findTwoEntriesProduct(numbers, target = 2020) {
 
 // Run the function and print the answer
 const result = findTwoEntriesProduct(numbers);
-console.log(`The answer is: ${result}`);
+console.log(`${result}`);
