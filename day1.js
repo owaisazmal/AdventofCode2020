@@ -1,16 +1,9 @@
 // --Advent of Code 2020 - Day 1: Report Repair--
 const fs = require('fs'); // importing fs to read the file    https://nodejs.org/api/fs.html#file-system
+const input = fs.readFileSync('input.txt', 'utf8'); //read file synchronusly https://nodejs.org/api/fs.html#fsreadfilesyncpath-options
+const numbers = input.split('\n').map(Number); //Split text into array of nums  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
-// Read the input file, it have numbers
-const input = fs.readFileSync('input.txt', 'utf8'); // Using readFileSync for sync read file
-
-// Split numbers into array and change them to Numbers
-const numbers = input.split('\n').map(Number); // .split makes array of lines
-
-/**
- * Function for finding two nums that add to 2020
- * It returns product of those numbers
- */
+// Function for finding two nums that add to 2020, it returns product of those numbers
 function findTwoEntriesProduct(numbers, target = 2020) {
   const seen = new Set(); // Make set to store nums we already checked
 
