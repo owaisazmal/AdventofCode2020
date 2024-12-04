@@ -5,11 +5,7 @@ const fs = require('fs'); //importing fs to read the file  https://nodejs.org/ap
 const input = fs.readFileSync('input2.txt', 'utf8'); //Read file synchronously: https://nodejs.org/api/fs.html#fsreadfilesyncpath-options
 const lines = input.trim().split('\n'); // Split file into lines (remove extra spaces)
 
-/**
- * Function to validate passwords
- * @param {string[]} lines - Each line contains a policy and a password
- * @returns {number} - Count of valid passwords
- */
+//Function to validate passwords
 function countValidPasswords(lines) {
   
     let validCount = 0; // Counter for valid passwords
@@ -36,4 +32,4 @@ function countValidPasswords(lines) {
 
 // Solve the problem
 const result = countValidPasswords(lines);
-console.log(`Number of valid passwords: ${result}`);
+console.log(`${result}`);
